@@ -1,9 +1,12 @@
 .idea/**/*
 *.xml
 *.iml
-node_modules/**/*.*
+
 package-lock.json
 prod/**/*.*
+
+# dependencies
+
 
 # mongoURI
 # /config/keys_dev.js
