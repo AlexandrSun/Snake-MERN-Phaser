@@ -30,6 +30,7 @@ export const Login = () => {
     }, []);
 
     const startHandler = () => {
+        if (!activeBtn) { return }
         if (!authorized) {
             const id = nanoid();
             const user = {name: userName, id};

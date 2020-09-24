@@ -31,12 +31,11 @@ export const ScorePage = () => {
         <div >
             <a href='/game'>
                 <Button
-                    text='New Game'
+                    text='Back'
                     active
                     centered
                 />
             </a>
-
 
             <table className='rating-table'>
                 <thead>
