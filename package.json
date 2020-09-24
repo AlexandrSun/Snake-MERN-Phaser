@@ -1,0 +1,30 @@
+{
+  "name": "phaser-test",
+  "version": "1.0.0",
+  "description": "Snake game",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "Node.js",
+    "React",
+    "MongoDB",
+    "Phaser"
+  ],
+  "author": "Alexandr Suhak",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.5",
+    "nanoid": "^3.1.12"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}

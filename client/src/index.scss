@@ -1,0 +1,176 @@
+$mainFontFamily: 'Roboto';
+$mainBlack: #323232;
+$mainColor: #F18D00;
+$secondBGColor: #d6d6d6;
+$secondFontColor: #999999;
+$mainBGColor: #fdffe3;
+
+
+body {
+  margin: 0;
+  background-color: $mainBGColor;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.loader {
+  margin: 64px auto;
+  border: 12px solid $secondBGColor;
+  border-radius: 50%;
+  border-top: 12px solid $mainColor;
+  width: 64px;
+  height: 64px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: 16px auto;
+  .main-title {
+    font-family: '$mainFontFamily', sans-serif;
+    font-size: 24px;
+    margin: 16px auto;
+    text-align: center;
+  }
+}
+
+.modal-layout {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba( 0, 0, 0, 0.2);
+
+  .modal {
+    width: 400px;
+    padding: 32px;
+    margin: 64px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+    h3 {
+      margin: 0;
+    }
+
+    .inputName {
+      font-size: 18px;
+      margin-top: 24px;
+      padding: 16px;
+      border: 2px solid $secondFontColor;
+      border-radius: 6px;
+      outline:none;
+
+      &:focus {
+        border: 2px solid $mainColor;
+      }
+    }
+  }
+}
+
+.button {
+  font-family: '$mainFontFamily', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 6px 10px;
+  margin-top: 24px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  &-active {
+    color: $mainBlack;
+    background-color: $mainColor;
+    cursor: pointer;
+  }
+
+  &-inactive {
+    color: $secondFontColor;
+    background-color: $secondBGColor;
+    &:focus {
+      outline:none;
+    }
+  }
+  &-centered {
+    display: block;
+    margin: 16px auto;
+  }
+}
+
+.rating-table {
+  margin: 0 auto;
+  font-family: $mainFontFamily, Sans-Serif;
+  font-size: 14px;
+  border-radius: 6px;
+  border-spacing: 0;
+  text-align: center;
+
+  th {
+    background: $mainColor;
+    color: $mainBlack;
+    padding: 10px 20px;
+  }
+  th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+  }
+  th:first-child {
+    border-top-left-radius: 6px;
+  }
+  th:last-child {
+    border-top-right-radius: 6px;
+    border-right: none;
+  }
+  td {
+    padding: 10px 20px;
+  }
+  tr:last-child td:first-child {
+    border-radius: 0 0 0 6px;
+  }
+  tr:last-child td:last-child {
+    border-radius: 0 0 6px 0;
+  }
+  tr td:last-child {
+    border-right: none;
+  }
+  .rating-table-left{
+    text-align: left;
+  }
+  tr:nth-child(odd) {
+    background-color: $mainBGColor;
+  }
+  tr:nth-child(even) {
+    background-color: white;
+  }
+}
+
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+}
