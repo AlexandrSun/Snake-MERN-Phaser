@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 export const Button = ({
                            text = '',
                            active = false,
-                           handler = function(){},
+                           handler = () => {},
                            centered = false}) => {
     const [isActive, setIsActive] = useState('inactive');
 

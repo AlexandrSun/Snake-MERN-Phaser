@@ -37,9 +37,10 @@ router.get(
     async (req, res) => {
         try {
             const score = await Rating.find()
-                .sort({"score": -1});
+                .sort({"score": -1})
+                .lean();
 
-            res.json(score)
+            res.json(score);
 
         } catch (e) {
             res.status(500).json({message: "Something went wrong, try again."})

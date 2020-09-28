@@ -50,7 +50,7 @@ export const ScorePage = () => {
                 <tbody>
                 { score.map((item, index) => {
                     return (
-                        <tr key={item.id}>
+                        <tr key={item.id + index}>
                             <td>{index + 1}</td>
                             <td className='rating-table-left'>{item.name}</td>
                             <td>{item.score}</td>

@@ -11,14 +11,6 @@ export const Login = () => {
 
     const nanoid = customAlphabet('1234567890', 10);
 
-    useEffect(() => {
-        if (userName.length > 0) {
-            setActiveBtn(true)
-        } else {
-            setActiveBtn(false);
-        }
-    }, [userName]);
-
     useEffect( () => {
         const localUser = JSON.parse(localStorage.getItem('user'));
         if (localUser) {
@@ -41,6 +33,11 @@ export const Login = () => {
 
     const changeHandler = (e) => {
         setUserName(e.target.value);
+        if (e.target.value.length > 0) {
+            setActiveBtn(true)
+        } else {
+            setActiveBtn(false);
+        }
     };
 
     return (

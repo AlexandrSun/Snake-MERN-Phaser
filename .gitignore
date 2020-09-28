@@ -6,7 +6,15 @@ package-lock.json
 prod/**/*.*
 
 # dependencies
+/node_modules
+/.pnp
+.pnp.js
 
+# testing
+/coverage
+
+# production
+/build
 
 # mongoURI
 # /config/keys_dev.js
